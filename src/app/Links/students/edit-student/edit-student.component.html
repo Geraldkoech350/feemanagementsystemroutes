@@ -1,0 +1,33 @@
+
+
+    <div class="content">
+        <h1>Edit Student</h1>
+        <div *ngIf="isinvalid">
+            <p [style]="{color: 'red'}">* Please input all fields</p>
+        </div>
+    
+        <!-- <label for="">Student Name</label>
+        <input class="txt" [(ngModel)]="name" type="text"> -->
+
+        <!-- <label for="">Registration Number</label>
+        <input class="txt" [(ngModel)]="reg" type="text">
+    
+        <label for="">Email Address</label>
+        <input class="txt" [(ngModel)]="email" type="text">
+
+        <label for="">Phone Number</label>
+        <input class="txt" [(ngModel)]="phone" type="number">
+
+        <label for="">School</label>
+        <input class="txt" [(ngModel)]="school" type="text">
+
+        <label for="">Course</label>
+        <input class="txt" [(ngModel)]="course" type="text"> -->
+    
+        <label for="">Balance</label>
+        <input class="txt" [(ngModel)]="balance" type="number">
+    
+        <button (click)="editStudent()" class="btn">Update Student</button>
+        <button (click)="deleteStudent()" class="btn">Delete Student</button>
+    
+    </div>

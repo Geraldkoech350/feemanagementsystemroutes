@@ -1,0 +1,22 @@
+
+    <nav>
+      <div class="logo">
+
+      <img class="logo-img" src="../../../assets/download.png">
+      <span class="text">Murang'a University of Technology</span>
+
+      </div>
+      
+        <ul>
+          <li><a [routerLinkActiveOptions]="{exact:true}" routerLinkActive="a-selected" routerLink="">Home</a></li>
+          <li><a routerLinkActive="a-selected" routerLink="addStudent">Add Student</a></li>
+          <li><a routerLinkActive="a-selected" routerLink="students">Get All Students</a></li>
+          <li><a routerLinkActive="a-selected" routerLink="withbalances">Balance</a></li>
+          <li><a routerLinkActive="a-selected" routerLink="nobalances">Cleared</a></li>
+        </ul>
+
+    </nav>
+
+    <div class="content">
+      <router-outlet></router-outlet>
+  </div>

@@ -1,0 +1,38 @@
+<div *ngIf="student">
+
+    <div class="list">
+        <div class="left">
+        </div>
+    
+        <div class="right">
+            <table class="center" border="4">
+                <thead>
+                    <tr>
+                        <th>Registration Number</th>
+                        <th>Student Name</th>
+                        <th>Email Address</th>
+                        <th>Phone Number</th>
+                        <th>School</th>
+                        <th>Course</th>
+                        <th>Balance</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>{{student.reg}}</td>
+                        <td>{{student.name}}</td>
+                        <td>{{student.contacts.email}}</td>
+                        <td>{{student.contacts.phone}}</td>
+                        <td>{{student.school}}</td>
+                        <td>{{student.course}}</td>
+                        <td>{{student.balance}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <button (click)="edit()">Edit Student</button>
+        </div>
+    </div>
+
+</div>

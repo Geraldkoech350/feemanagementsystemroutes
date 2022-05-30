@@ -1,0 +1,12 @@
+<div class="details">
+
+    <div class="left">
+        <a routerLinkActive="selected" [routerLink]="['/students', student.reg]"
+         class="s-list" *ngFor="let student of students">{{student.name}}</a>
+    </div>
+
+    <div class="right">
+         <router-outlet></router-outlet> <!-- displaying output -->
+      
+    </div>
+</div>

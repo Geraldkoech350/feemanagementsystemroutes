@@ -1,0 +1,147 @@
+
+
+*{
+    font-family:'Times New Roman', Times, serif;
+}
+
+body{
+    height: 78vh;
+}
+
+.header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px 100px;
+}
+
+.header::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    filter: blur(50px);
+
+}
+
+.text-box{
+    max-width: 850px;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
+    z-index: 100;
+}
+
+.h1{
+    font-size: 35px;
+    color: #3f51b5;
+    text-align: center;
+    /* animation: slideleft 1s linear forwards;
+    overflow-x: hidden; */
+}
+
+/* @keyframes slideleft {
+    0%{
+        transform: translate(100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+
+h1.h1{
+    animation-delay: 1s;
+} */
+
+.text-box  a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background: #3f51b5;
+    padding: 10px 30px;
+    font-size: 18px;
+    margin-top: 50px;
+    border-radius: 6px;
+}
+
+.left{
+    height: 99%;
+    background: url("../../../assets/madsen.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.right{
+    padding: 25px 40px;
+    height: 100%;
+}
+
+.btn {
+    background: #3f51b5;
+    border-style: none;
+    padding: 10px 30px;
+    font-size: 18px;
+    border-radius: 6px;
+    color: white;
+    margin-left: 10px;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    outline: none;
+    transition: 3s;
+
+}
+
+.btn:hover{
+    background-color: #27ae60;
+}
+
+h2{
+    position: relative;
+    padding-bottom: 10px;
+
+}
+
+h2::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+}
+
+.field{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: none;
+    border: 2px solid rgba(0, 0, 0, 0);
+    background-color: rgba(230, 230, 230, 0.6);
+    font-size: 1.1rem;
+    margin-bottom: 22px;
+    transition: .3s;
+}
+
+.field:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+
+}
+
+.field:focus{
+    background-color: #fff;
+    border: 2px solid rgba(30, 85, 250, 0.47);
+}

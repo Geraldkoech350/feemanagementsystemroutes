@@ -1,0 +1,49 @@
+
+*{
+    font-family:'Times New Roman', Times, serif;
+}
+
+.balances{
+    height: 76vh;
+}
+
+.color-bal{
+    color: red;
+    font-weight: 700;
+}
+
+.heading{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 60rem;
+    padding: 5px;
+}
+
+.content{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 60rem;
+    padding: 5px;
+}
+
+table{
+    text-align: center;
+}
+
+.center{
+    margin-top: 20px;
+    margin-right: -270px;
+}
+
+th, td{
+    padding: 5px;
+}
+
+th{
+    color: #3f51b5;
+    font-weight: 800;
+}

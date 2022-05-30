@@ -1,0 +1,99 @@
+<!-- isvalid -->
+<div class="form-panel">
+
+  <form [formGroup]="profile" (ngSubmit)="onSubmit()">
+       <h1>Add a Student</h1>
+
+       <p *ngIf="errMsg" style="color: red; margin: 0">{{ errMsg }}</p>
+
+       <div class="form-groupnamereg">
+
+         <div>
+
+          <label>Student Name</label>
+                <input formControlName="name" type="text" class="form-control" />
+                 <span class="error" *ngIf="!profile!.get('name')!.valid && profile!.get('name')!.touched ">*
+                   Name is required
+               </span>
+
+         </div>
+
+         <div>
+
+          <label>Registration Number</label>
+                <input formControlName="reg" type="text" class="form-control" />
+                 <span class="error" *ngIf="!profile!.get('reg')!.valid && profile!.get('reg')!.touched ">*
+                   Registration number is required
+               </span>
+
+         </div>
+       
+       </div> <!--End of common div for name and Registration -->
+
+
+       <div class="emailphone" formGroupName="contacts">
+
+         <div>
+
+          <label>Email Address</label>
+          <input type="text" formControlName="email" class="form-control" >
+
+           <p class="error" *ngIf="profile!.get('contacts.email')!.errors?.['required'] && 
+           profile!.get('contacts.email')!.touched "> * Please provide an email </p>
+
+           <p class="error" *ngIf="profile!.get('contacts.email')!.errors?.['email'] && 
+           profile!.get('contacts.email')!.touched "> * Please enter a valid email </p>
+
+           <p class="error" *ngIf="profile!.get('contacts.email')!.errors?.['pattern'] && 
+           profile!.get('contacts.email')!.touched "> *only @thejitu.com emails allowed</p>
+     
+
+         </div> <!-- Email div -->
+
+         <div>
+
+          <label>Phone Number</label>
+          <input formControlName="phone" type="text" class="form-control" />
+          <p class="error" *ngIf="profile.get('contacts.phone')!.errors?.['required'] && profile.get('contacts.phone')!.touched">* Please enter phone number</p>
+          <p class="error" *ngIf="profile.get('contacts.phone')!.errors?.['maxlength'] && profile.get('contacts.phone')!.touched">*Min of 10 digits accepted</p> 
+          <p class="error" *ngIf="profile.get('contacts.phone')!.errors?.['minlength'] && profile.get('contacts.phone')!.touched">*Max of 10 digits accepted</p> 
+          <p class="error" *ngIf="profile.get('contacts.phone')!.errors?.['pattern'] && profile.get('contacts.phone')!.touched">*Only numbers are allowed</p>
+
+  
+
+         </div> <!--phone div-->
+
+         </div> <!-- email and phone div -->
+
+
+   
+       <div class="schoolcourse">
+         
+        <div>
+          <label>School</label>
+          <input formControlName="school" type="text" class="form-control" />
+          <span class="error" *ngIf="!profile!.get('school')!.valid && profile!.get('school')!.touched ">*
+          school cannot be empty
+          </span>
+          
+        </div> <!-- school div without class -->
+
+        <div>
+          
+          <label>Course</label>
+          <input formControlName="course" type="text" />
+          <span class="error" *ngIf="!profile!.get('course')!.valid && profile!.get('course')!.touched ">*
+                   course cannot be empty
+          </span>
+
+        </div> <!-- course div without class -->
+
+       </div>
+   
+   
+       <button [disabled]="profile.invalid" class="btn" type="submit">ADD STUDENT</button>
+    
+   </form>
+   
+
+</div>

@@ -1,0 +1,63 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.form-panel{
+    height: 78vh;
+}
+
+h1{
+    margin-left: 140px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin-left: 200px;
+    /* position: relative;
+    border-radius: 30px; */
+    
+}
+
+.form-groupnamereg, .emailphone, .schoolcourse{
+    display: flex;
+}
+
+div{
+    margin: 5px;
+}
+
+.form-groupnamereg label, .emailphone label, .schoolcourse label{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.form-groupnamereg input, .emailphone input, .schoolcourse input{
+    display: block;
+    padding: 7px;
+    border-radius: 3px;
+    border-style: none;
+}
+
+div{
+    margin-left: 20px;
+}
+
+
+.btn{
+    margin-top: 10px;
+    background-color: #3f51b5;
+    font-weight: 800;
+    border-radius: 10px;
+    color: white;
+    border-style: none;
+    padding: 10px 15px;
+    width: fit-content;
+    margin-left: 170px;
+}
+
+.error{
+    color: red;
+}

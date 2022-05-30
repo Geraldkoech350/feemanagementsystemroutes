@@ -1,0 +1,30 @@
+<div class="balances">
+
+    <div class="header">
+        <div class="heading">
+
+            <table class="center" border="4">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>School</th>
+                        <th>Course</th>
+                        <th>Balance</th>
+                    </tr> 
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let student of students">
+                        <td>{{student.name}}</td>
+                        <td>{{student.contacts.email}}</td>
+                        <td>{{student.school}}</td>
+                        <td>{{student.course}}</td>
+                        <td class="color-bal">{{student.balance}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+       
+    </div>
+</div>
